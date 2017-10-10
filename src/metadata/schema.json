@@ -17,6 +17,32 @@
             "apiSecret"
         ]
     },
+    "events": [{
+        "name": "webhookEvent",
+        "description": "This method is called every time a Bitbucket webhook event occurs",
+        "payload": {
+            "list_folder": {
+                "accounts": [
+                    "dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc"
+                ]
+            },
+            "delta": {
+                "users": [
+                    12345678,
+                    23456789
+                ]
+            }
+        },
+        "steps": [
+            "User RapidAPI webhook url as url in proper blocks"
+        ],
+        "args": [{
+            "name": "token",
+            "type": "string",
+            "info": "Token sent on each message",
+            "required": true
+        }]
+    }],
     "steps": [
         "Browse to Bitbucket http://https://www.bitbucket.com/",
         "Browse to Setting https://bitbucket.org/account",
