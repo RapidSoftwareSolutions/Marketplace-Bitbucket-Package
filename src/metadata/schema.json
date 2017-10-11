@@ -1021,7 +1021,7 @@
             ],
             "vendorRequest": {
                 "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/commit\/{$data['commitId']}\/statuses",
-                "method": "delete",
+                "method": "get",
                 "requestParameters": [{
                     "type": "query",
                     "parameters": []
@@ -6921,7 +6921,7 @@
                 "required": true
             }],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/user\/emails",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/emails",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -6958,7 +6958,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/user\/emails\/{$data['email']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/emails\/{$data['email']}",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -6995,7 +6995,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/user\/{$data['username']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -7032,7 +7032,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/user\/{$data['username']}\/followers",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/followers",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -7069,7 +7069,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/user\/{$data['username']}\/following",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/following",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",

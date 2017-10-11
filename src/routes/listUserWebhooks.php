@@ -23,7 +23,7 @@ $app->post('/api/Bitbucket/listUserWebhooks', function ($request, $response) {
     
 
     $client = $this->httpClient;
-    $query_str = "https://api.bitbucket.org/2.0/user/{$data['username']}/hooks";
+    $query_str = "https://api.bitbucket.org/2.0/users/{$data['username']}/hooks";
 
     
 
