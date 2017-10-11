@@ -18,8 +18,11 @@ $app->post('/api/Bitbucket/addDownload', function ($request, $response) {
        'multipart' => ['file']
     ];
 
-    $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
-
+    // $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
+    $data['multipart'][] =[
+        'name'=> 'file',
+        'contents' => fopen($post_data['args']['file'], 'r')
+    ];
     
 
     $client = $this->httpClient;
