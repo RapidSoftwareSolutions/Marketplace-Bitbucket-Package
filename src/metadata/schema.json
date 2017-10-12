@@ -54,12 +54,6 @@
             "name": "getAccessToken",
             "description": "Get oAuth 2 access token",
             "args": [{
-                    "name": "apiKey",
-                    "type": "credentials",
-                    "info": "Your API key",
-                    "required": true
-                },
-                {
                     "name": "apiSecret",
                     "type": "credentials",
                     "info": "Your API secret",

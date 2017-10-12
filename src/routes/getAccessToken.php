@@ -4,7 +4,7 @@ $app->post('/api/Bitbucket/getAccessToken', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['apiKey','apiSecret','code']);
+    $validateRes = $checkRequest->validate($request, ['apiSecret','code']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -12,14 +12,14 @@ $app->post('/api/Bitbucket/getAccessToken', function ($request, $response) {
         $post_data = $validateRes;
     }
 
-    $requiredParams = ['apiKey'=>'apiKey','apiSecret'=>'apiSecret','code'=>'code'];
+    $requiredParams = ['apiSecret'=>'apiSecret','code'=>'code'];
     $optionalParams = [];
     $bodyParams = [
-       'form_params' => ['code']
+       'form_params' => ['code', 'grant_type']
     ];
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
-
+$data['grant_type'] = 'authorization_code';
     
 
     $client = $this->httpClient;
@@ -28,7 +28,7 @@ $app->post('/api/Bitbucket/getAccessToken', function ($request, $response) {
     
 
     $requestParams = \Models\Params::createRequestBody($data, $bodyParams);
-    $requestParams['headers'] = ["Authorization"=>"{$data['apiKey']}:{$data['apiSecret']}"];
+    $requestParams['headers'] = ["Authorization"=>"Basic {$data['apiSecret']}"];
      
 
     try {
