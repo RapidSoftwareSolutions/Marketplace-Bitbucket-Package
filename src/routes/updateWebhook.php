@@ -15,7 +15,7 @@ $app->post('/api/Bitbucket/updateWebhook', function ($request, $response) {
     $requiredParams = ['accessToken'=>'accessToken','username'=>'username','reposlug'=>'reposlug','webhookId'=>'webhookId','events'=>'events','url'=>'url','active'=>'active'];
     $optionalParams = ['description'=>'description'];
     $bodyParams = [
-       'json' => ['events','url','active','description']
+       'json' => ['events','url','active','description', 'events']
     ];
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
