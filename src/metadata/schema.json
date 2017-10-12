@@ -5787,6 +5787,38 @@
                     "type": "File",
                     "info": "File with commit",
                     "required": true
+                },
+                {
+                    "name": "message",
+                    "type": "String",
+                    "info": "The commit message.",
+                    "required": false
+                },
+                {
+                    "name": "author",
+                    "type": "String",
+                    "info": "The raw string to be used as the new commit's author. This string follows the format \"Erik van Zijst evzijst@atlassian.com\".",
+                    "required": false
+                },
+                {
+                    "name": "parents",
+                    "type": "List",
+                    "structure": {
+                        "name": "parent",
+                        "type": "String",
+                        "info": "Single parent"
+                    },
+                    "info": "List of SHA1s of the commits that should be the parents of the newly created commit.",
+                    "required": false,
+                    "vendorSchema": {
+                        "format": "toString:{,}"
+                    }
+                },
+                {
+                    "name": "branch",
+                    "type": "String",
+                    "info": "The name of the branch that the new commit should be created on.",
+                    "required": false
                 }
             ],
             "vendorRequest": {
@@ -5795,7 +5827,11 @@
                 "requestParameters": [{
                     "type": "multipart",
                     "parameters": [
-                        "file"
+                        "file",
+                        "author",
+                        "message",
+                        "parents",
+                        "branch"
                     ]
                 }],
                 "headers": {

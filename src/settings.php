@@ -14,6 +14,8 @@ return [
             'name' => 'slim-app',
             'path' => __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
-        ]
+        ],
+        'uploadServiceUrl' => 'http://104.198.149.144:8080',
+        'fileExtensions' => ['wav' => '.wav', 'html' => '.html', 'md' => '.md', 'jpeg' => '.jpeg', 'bmp'=> '.bmp'],
     ],
 ];

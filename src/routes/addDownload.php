@@ -14,7 +14,7 @@ $app->post('/api/Bitbucket/addDownload', function ($request, $response, $args) {
     $query_str = "https://api.bitbucket.org/2.0/repositories/{$post_data['args']['username']}/{$post_data['args']['reposlug']}/downloads";
         $body = array();
     $file[] = [
-        'name'     => 'file',
+        'name'     => 'files',
         'contents' => fopen($post_data['args']['file'], 'r')
     ];
 

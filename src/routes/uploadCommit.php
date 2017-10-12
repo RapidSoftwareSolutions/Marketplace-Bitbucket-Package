@@ -14,8 +14,24 @@ $app->post('/api/Bitbucket/uploadCommit', function ($request, $response, $args) 
     $query_str = "https://api.bitbucket.org/2.0/repositories/{$post_data['args']['username']}/{$post_data['args']['reposlug']}/src";
         $body = array();
     $file[] = [
-        'name'     => 'file',
+        'name'     => 'files',
         'contents' => fopen($post_data['args']['file'], 'r')
+    ];
+    $file[] = [
+        'name'     => 'message',
+        'contents' => $post_data['args']['message']
+    ];
+    $file[] = [
+        'name'     => 'author',
+        'contents' => $post_data['args']['author']
+    ];
+    $file[] = [
+        'name'     => 'parents',
+        'contents' => implode(',',$post_data['args']['parents'])
+    ];
+    $file[] = [
+        'name'     => 'branch',
+        'contents' => $post_data['args']['branch']
     ];
 
     //requesting remote API
