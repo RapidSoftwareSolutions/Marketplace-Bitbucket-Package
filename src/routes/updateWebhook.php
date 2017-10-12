@@ -4,7 +4,7 @@ $app->post('/api/Bitbucket/updateWebhook', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken','username','reposlug','webhookId', 'events', 'url']);
+    $validateRes = $checkRequest->validate($request, ['accessToken','username','reposlug','webhookId', 'events', 'url', 'active']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -29,8 +29,6 @@ $app->post('/api/Bitbucket/updateWebhook', function ($request, $response) {
 
     $requestParams = \Models\Params::createRequestBody($data, $bodyParams);
     $requestParams['headers'] = ["Authorization"=>"Bearer {$data['accessToken']}"];
-    //  var_dump($requestParams);
-    //  exit();
 
     try {
         $resp = $client->put($query_str, $requestParams);
