@@ -4,7 +4,7 @@ $app->post('/api/Bitbucket/updateCommitBuild', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken','username','reposlug','commitId','buildId']);
+    $validateRes = $checkRequest->validate($request, ['accessToken','username','reposlug','commitId','buildId', 'state']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -12,8 +12,8 @@ $app->post('/api/Bitbucket/updateCommitBuild', function ($request, $response) {
         $post_data = $validateRes;
     }
 
-    $requiredParams = ['accessToken'=>'accessToken','username'=>'username','reposlug'=>'reposlug','commitId'=>'commitId','buildId'=>'buildId'];
-    $optionalParams = ['url'=>'url','state'=>'state','key'=>'key','description'=>'description','refname'=>'refname'];
+    $requiredParams = ['accessToken'=>'accessToken','username'=>'username','reposlug'=>'reposlug','commitId'=>'commitId','buildId'=>'buildId','state'=>'state'];
+    $optionalParams = ['url'=>'url','key'=>'key','description'=>'description','refname'=>'refname'];
     $bodyParams = [
        'json' => ['url','state','name','description','refname']
     ];

@@ -4,7 +4,7 @@ $app->post('/api/Bitbucket/updateUserWebhook', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken','username','webhookId']);
+    $validateRes = $checkRequest->validate($request, ['accessToken','username','webhookId','events','url','active']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -12,8 +12,8 @@ $app->post('/api/Bitbucket/updateUserWebhook', function ($request, $response) {
         $post_data = $validateRes;
     }
 
-    $requiredParams = ['accessToken'=>'accessToken','username'=>'username','webhookId'=>'webhookId'];
-    $optionalParams = ['description'=>'description','events'=>'events','url'=>'url','active'=>'active'];
+    $requiredParams = ['accessToken'=>'accessToken','username'=>'username','webhookId'=>'webhookId','events'=>'events','url'=>'url','active'=>'active'];
+    $optionalParams = ['description'=>'description'];
     $bodyParams = [
        'json' => ['events','url','active','description']
     ];

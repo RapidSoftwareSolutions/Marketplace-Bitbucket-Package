@@ -1242,7 +1242,7 @@
                         "STOPPED"
                     ],
                     "info": "Provides some indication of the status of this commit",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "key",
@@ -2357,13 +2357,13 @@
                         "info": "Single event to track"
                     },
                     "info": "The events this webhook is subscribed to.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "url",
                     "type": "String",
                     "info": "The URL events get delivered to.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "active",
@@ -2373,7 +2373,7 @@
                         "false"
                     ],
                     "info": "The URL events get delivered to.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",
@@ -6812,7 +6812,7 @@
                 },
                 {
                     "name": "owner",
-                    "info": "The account.",
+                    "type": "String",
                     "info": "The team name",
                     "required": true
                 },
@@ -7324,13 +7324,13 @@
                         "info": "Single event to track"
                     },
                     "info": "The events this webhook is subscribed to.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "url",
                     "type": "String",
                     "info": "The URL events get delivered to.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "active",
@@ -7340,7 +7340,7 @@
                         "false"
                     ],
                     "info": "Whether the wehbook is enabled.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",
