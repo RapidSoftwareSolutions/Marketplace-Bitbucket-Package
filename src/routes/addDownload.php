@@ -1,85 +1,68 @@
 <?php
-
-$app->post('/api/Bitbucket/addDownload', function ($request, $response) {
-
+$app->post('/api/Bitbucket/addDownload', function ($request, $response, $args) {
     $settings = $this->settings;
+
+    //checking properly formed json
     $checkRequest = $this->validation;
     $validateRes = $checkRequest->validate($request, ['accessToken','username','reposlug','file']);
-
-    if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
+    if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
         $post_data = $validateRes;
     }
-
-    $requiredParams = ['accessToken'=>'accessToken','username'=>'username','reposlug'=>'reposlug','file'=>'file'];
-    $optionalParams = [];
-    $bodyParams = [
-       'multipart' => ['file']
-    ];
-
-    // $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
-    $data['multipart'][] =[
-        'name'=> 'file',
+    //forming request to vendor API
+    $query_str = "https://api.bitbucket.org/2.0/repositories/{$post_data['args']['username']}/{$post_data['args']['reposlug']}/downloads";
+        $body = array();
+    $file[] = [
+        'name'     => 'file',
         'contents' => fopen($post_data['args']['file'], 'r')
     ];
-    
 
-    $client = $this->httpClient;
-    $query_str = "https://api.bitbucket.org/2.0/repositories/{$data['username']}/{$data['reposlug']}/downloads";
-
-    
-
-    $requestParams = \Models\Params::createRequestBody($data, $bodyParams);
-    $requestParams['headers'] = ["Authorization"=>"Bearer {$data['accessToken']}"];
-     
+    //requesting remote API
+    $client = new GuzzleHttp\Client();
 
     try {
-        $resp = $client->post($query_str, $requestParams);
-        $responseBody = $resp->getBody()->getContents();
 
-        if(in_array($resp->getStatusCode(), ['200', '201', '202', '203', '204'])) {
+        $resp = $client->request('POST', $query_str, [
+            'headers'=>[
+                "Authorization" => "Bearer ". $post_data['args']['accessToken']
+            ],
+            'multipart' => $file
+        ]);
+
+        $responseBody = $resp->getBody()->getContents();
+        $rawBody = json_decode($resp->getBody());
+
+        $all_data[] = $rawBody;
+        if ($response->getStatusCode() == '200') {
             $result['callback'] = 'success';
-            $result['contextWrites']['to'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
-            if(empty($result['contextWrites']['to'])) {
-                $result['contextWrites']['to']['status_msg'] = "Api return no results";
-            }
+            $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {
             $result['callback'] = 'error';
             $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-            $result['contextWrites']['to']['status_msg'] = json_decode($responseBody);
+            $result['contextWrites']['to']['status_msg'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
         }
 
     } catch (\GuzzleHttp\Exception\ClientException $exception) {
-
-        $responseBody = $exception->getResponse()->getBody()->getContents();
-        if(empty(json_decode($responseBody))) {
-            $out = $responseBody;
-        } else {
-            $out = json_decode($responseBody);
-        }
+        $responseBody = $exception->getResponse()->getReasonPhrase();
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-        $result['contextWrites']['to']['status_msg'] = $out;
+        $result['contextWrites']['to']['status_msg'] = $responseBody;
 
     } catch (GuzzleHttp\Exception\ServerException $exception) {
 
-        $responseBody = $exception->getResponse()->getBody()->getContents();
-        if(empty(json_decode($responseBody))) {
-            $out = $responseBody;
-        } else {
-            $out = json_decode($responseBody);
-        }
+        $responseBody = $exception->getResponse()->getBody(true);
         $result['callback'] = 'error';
-        $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-        $result['contextWrites']['to']['status_msg'] = $out;
+        $result['contextWrites']['to'] = json_decode($responseBody);
 
-    } catch (GuzzleHttp\Exception\ConnectException $exception) {
+    } catch (GuzzleHttp\Exception\BadResponseException $exception) {
+
+        $responseBody = $exception->getResponse()->getBody(true);
         $result['callback'] = 'error';
-        $result['contextWrites']['to']['status_code'] = 'INTERNAL_PACKAGE_ERROR';
-        $result['contextWrites']['to']['status_msg'] = 'Something went wrong inside the package.';
+        $result['contextWrites']['to'] = json_decode($responseBody);
 
     }
+
 
     return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($result);
 
