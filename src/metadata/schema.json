@@ -6701,7 +6701,7 @@
                 {
                     "name": "owner",
                     "type": "String",
-                    "info": "The team name",
+                    "info": "The account.",
                     "required": true
                 },
                 {
@@ -6744,7 +6744,7 @@
                 {
                     "name": "owner",
                     "type": "String",
-                    "info": "The team name",
+                    "info": "The account.",
                     "required": true
                 },
                 {
@@ -6812,7 +6812,7 @@
                 },
                 {
                     "name": "owner",
-                    "type": "String",
+                    "info": "The account.",
                     "info": "The team name",
                     "required": true
                 },
@@ -7324,13 +7324,13 @@
                         "info": "Single event to track"
                     },
                     "info": "The events this webhook is subscribed to.",
-                    "required": true
+                    "required": false
                 },
                 {
                     "name": "url",
                     "type": "String",
                     "info": "The URL events get delivered to.",
-                    "required": true
+                    "required": false
                 },
                 {
                     "name": "active",
@@ -7340,7 +7340,7 @@
                         "false"
                     ],
                     "info": "Whether the wehbook is enabled.",
-                    "required": true
+                    "required": false
                 },
                 {
                     "name": "description",
