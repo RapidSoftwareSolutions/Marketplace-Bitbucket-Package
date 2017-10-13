@@ -2,7 +2,7 @@
 
 # Bitbucket Package
 Code against the Bitbucket API to automate simple tasks, embed Bitbucket data into your own site, build mobile or desktop apps
-* Domain: [Bitbucket](http://https://www.bitbucket.com/)
+* Domain: [Bitbucket](https://www.bitbucket.com/)
 * Credentials: apiKey, apiSecret
 
 ## How to get credentials: 
@@ -40,7 +40,6 @@ Get oAuth 2 access token
 
 | Field    | Type       | Description
 |----------|------------|----------
-| apiKey   | credentials| Your API key
 | apiSecret| credentials| Your API secret
 | code     | String     | Code provided by user
 
@@ -73,7 +72,7 @@ Returns a paginated list of all repositories owned by the specified account or U
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
+| username   | String| Username of the user
 | role       | Select| Filters the result based on the authenticated user's role on each repository.
 | after      | String| Show repositories starting from
 
@@ -83,8 +82,8 @@ Returns the object describing this repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.addRepository
 Create new repository
@@ -92,7 +91,7 @@ Create new repository
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
+| username   | String| Username of the user
 | reposlug   | String| Slug for new repository
 | language   | String| Language for new repository
 | scm        | Select| SCM for new repository
@@ -107,7 +106,7 @@ Update existing repository
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
+| username   | String| Username of the user
 | reposlug   | String| Slug for new repository
 | language   | String| Language for new repository
 | scm        | Select| SCM for new repository
@@ -122,8 +121,8 @@ Deletes existing repository
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.listBranchRestrictions
 Returns a paginated list of all branch restrictions on the repository.
@@ -131,8 +130,8 @@ Returns a paginated list of all branch restrictions on the repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.addBranchRestrictions
 Creates a new branch restriction rule for a repository.
@@ -140,8 +139,8 @@ Creates a new branch restriction rule for a repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | kind       | Select| kind describes what will be restricted. Allowed values are: push, force, delete, and restrict_merges.
 | pattern    | String| Pattern for restriction
 | value      | Number| Value with kind-specific semantics: "require_approvals_to_merge" uses it to require a minimum number of approvals on a PR; "require_passing_builds_to_merge" uses it to require a minimum number of passing builds.
@@ -154,8 +153,8 @@ Returns a specific branch restriction rule.
 | Field             | Type  | Description
 |-------------------|-------|----------
 | accessToken       | String| oAuth 2 access token
-| username          | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug          | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username          | String| Username of the user
+| reposlug          | String| Repository slug
 | brachRestrictionId| String| The restriction rule's id
 
 ## Bitbucket.updateBranchRestriction
@@ -164,8 +163,8 @@ Updates a specific branch restriction rule.
 | Field             | Type  | Description
 |-------------------|-------|----------
 | accessToken       | String| oAuth 2 access token
-| username          | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug          | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username          | String| Username of the user
+| reposlug          | String| Repository slug
 | brachRestrictionId| String| The restriction rule's id
 | pattern           | String| Pattern for restriction
 | value             | Number| Value with kind-specific semantics: "require_approvals_to_merge" uses it to require a minimum number of approvals on a PR; "require_passing_builds_to_merge" uses it to require a minimum number of passing builds.
@@ -178,8 +177,8 @@ Deletes a specific branch restriction rule.
 | Field             | Type  | Description
 |-------------------|-------|----------
 | accessToken       | String| oAuth 2 access token
-| username          | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug          | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username          | String| Username of the user
+| reposlug          | String| Repository slug
 | brachRestrictionId| String| The restriction rule's id
 
 ## Bitbucket.approveCommit
@@ -188,8 +187,8 @@ Approve the specified commit as the authenticated user.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 
 ## Bitbucket.unapproveCommit
@@ -198,8 +197,8 @@ Redact the authenticated user's approval of the specified commit.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 
 ## Bitbucket.listCommitStatuses
@@ -208,8 +207,8 @@ Returns all statuses (e.g. build results) for a specific commit.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 
 ## Bitbucket.addCommitBuild
@@ -218,8 +217,8 @@ Creates a new build status against the specified commit.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 | url        | String| A URL linking back to the vendor or build system, for providing more information about whatever process produced this status.
 | state      | Select| Provides some indication of the status of this commit
@@ -234,8 +233,8 @@ Returns the specified build status for a commit.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 | buildId    | String| The build status' unique key
 
@@ -245,8 +244,8 @@ Used to update the current status of a build status object on the specific commi
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 | buildId    | String| The build status' unique key
 | url        | String| A URL linking back to the vendor or build system, for providing more information about whatever process produced this status.
@@ -261,8 +260,8 @@ Returns the specified commit.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 
 ## Bitbucket.listCommitComments
@@ -271,8 +270,8 @@ Returns the commit's comments.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 
 ## Bitbucket.getSingleCommitComment
@@ -281,8 +280,8 @@ Returns the specified commit comment.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit's SHA1.
 | commentId  | String| Id of the comment
 
@@ -292,8 +291,8 @@ Returns the specified commit comment.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | branch     | String| Name of the branch
 | exclude    | List  | Returns all commits in the repo that are not on these branches
 | include    | List  | Returns all commits in the repo that are on these branches
@@ -304,8 +303,8 @@ Returns the components that have been defined in the issue tracker.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.getSingleComponent
 Returns the specified issue tracker component object.
@@ -313,8 +312,8 @@ Returns the specified issue tracker component object.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | componentId| String| The component's id
 
 ## Bitbucket.listDefaultReviewers
@@ -323,8 +322,8 @@ Returns the repository's default reviewers.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.getSingleDefaultReviewer
 Returns the repository's default reviewers.
@@ -332,8 +331,8 @@ Returns the repository's default reviewers.
 | Field       | Type  | Description
 |-------------|-------|----------
 | accessToken | String| oAuth 2 access token
-| username    | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug    | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username    | String| Username of the user
+| reposlug    | String| Repository slug
 | reviewerName| String| Specified reviewer.
 
 ## Bitbucket.addDefaultReviewer
@@ -342,8 +341,8 @@ Adds the repository's default reviewers.
 | Field       | Type  | Description
 |-------------|-------|----------
 | accessToken | String| oAuth 2 access token
-| username    | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug    | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username    | String| Username of the user
+| reposlug    | String| Repository slug
 | reviewerName| String| Specified reviewer.
 
 ## Bitbucket.deleteDefaultReviewer
@@ -352,8 +351,8 @@ Deletes the repository's default reviewers.
 | Field       | Type  | Description
 |-------------|-------|----------
 | accessToken | String| oAuth 2 access token
-| username    | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug    | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username    | String| Username of the user
+| reposlug    | String| Repository slug
 | reviewerName| String| Specified reviewer.
 
 ## Bitbucket.getSingleDiff
@@ -362,8 +361,8 @@ Produces a raw, git-style diff for either a single commit (diffed against its fi
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | diffId     | String| ID of the diff
 | context    | Number| Generate diffs with lines of context instead of the usual three
 | path       | String| Limit the diff to a single file
@@ -374,8 +373,8 @@ Returns a list of download links associated with the repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.addDownload
 Upload new download artifacts.
@@ -383,8 +382,8 @@ Upload new download artifacts.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | file       | File  | File to upload
 
 ## Bitbucket.getSingleDownload
@@ -393,8 +392,8 @@ Return a redirect to the contents of a download artifact.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | filename   | String| File to get
 
 ## Bitbucket.deleteDownload
@@ -403,8 +402,8 @@ Deletes the specified download artifact from the repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | filename   | String| File to delete
 
 ## Bitbucket.listForks
@@ -413,8 +412,8 @@ Returns a paginated list of all the forks of the specified repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.listWebhooks
 Returns a paginated list of webhooks installed on this repository.
@@ -422,8 +421,8 @@ Returns a paginated list of webhooks installed on this repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.addWebhook
 Creates a new webhook on the specified repository. You can use our service as url: 
@@ -434,8 +433,8 @@ https://webhooks.rapidapi.com/api/message/Bitbucket/webhookEvent/{projectName}/{
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | events     | List  | The events this webhook is subscribed to.
 | url        | String| The URL events get delivered to.
 | active     | Select| Whether the wehbook is enabled.
@@ -447,8 +446,8 @@ Returns the webhook with the specified id installed on the specified repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | webhookId  | String| Id of the webhook
 
 ## Bitbucket.updateWebhook
@@ -460,8 +459,8 @@ https://webhooks.rapidapi.com/api/message/Bitbucket/webhookEvent/{projectName}/{
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | webhookId  | String| Id of the webhook
 | events     | List  | The events this webhook is subscribed to.
 | url        | String| The URL events get delivered to.
@@ -474,8 +473,8 @@ Deletes the webhook with the specified id installed on the specified repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | webhookId  | String| Id of the webhook
 
 ## Bitbucket.listIssues
@@ -484,8 +483,8 @@ Returns the issues in the issue tracker.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.addIssues
 Creates a new issue.
@@ -493,8 +492,8 @@ Creates a new issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | title      | String| Title of the issue
 | priority   | Select| Priority of the issue
 | kind       | Select| Kind of the issue
@@ -510,8 +509,8 @@ Returns the specified issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.deleteSingleIssue
@@ -520,8 +519,8 @@ Deletes the specified issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.listIssueAttachements
@@ -530,8 +529,8 @@ Returns the specified issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.addIssueAttachement
@@ -540,8 +539,8 @@ Returns the specified issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 | file       | String| Attachement file
 
@@ -551,8 +550,8 @@ Returns the specified issue attachment.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 | attachement| String| Attachement path
 
@@ -562,8 +561,8 @@ Deletes the specified issue attachment.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 | attachement| String| Attachement path
 
@@ -573,8 +572,8 @@ Returns the specified issue comments.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.getIssueSingleComment
@@ -583,8 +582,8 @@ Returns the specified issue comment.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 | commentId  | String| Id of the comment
 
@@ -594,8 +593,8 @@ Check whether the authenticated user has voted for this issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.addIssueVote
@@ -604,8 +603,8 @@ Vote for this issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.deleteIssueVote
@@ -614,8 +613,8 @@ Retract your vote.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.checkIssueWatching
@@ -624,8 +623,8 @@ Indicated whether or not the authenticated user is watching this issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.watchIssue
@@ -634,8 +633,8 @@ Start watching this issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.unwatchIssue
@@ -644,8 +643,8 @@ Stop watching this issue.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | issueId    | String| Id of the issue
 
 ## Bitbucket.listMilestones
@@ -654,8 +653,8 @@ Returns the milestones that have been defined in the issue tracker.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.getSingleMilestone
 Returns the specified issue tracker milestone object.
@@ -663,8 +662,8 @@ Returns the specified issue tracker milestone object.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | milestoneId| String| The milestone's id
 
 ## Bitbucket.getSinglePatch
@@ -673,8 +672,8 @@ Produces a raw patch for a single commit
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | commitId   | String| The commit id
 
 ## Bitbucket.getSinglePipeline
@@ -683,8 +682,8 @@ Retrieve a specified pipeline
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | pipelineId | String| The pipeline id
 
 ## Bitbucket.getPipelineSingleStep
@@ -693,8 +692,8 @@ Retrieve a given step of a pipeline.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | pipelineId | String| The pipeline id
 | stepId     | String| The step id
 
@@ -704,8 +703,8 @@ Retrieve the log file for a given step of a pipeline.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | pipelineId | String| The pipeline id
 | stepId     | String| The step id
 
@@ -715,28 +714,27 @@ Signal the stop of a pipeline and all of its steps that not have completed yet.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | pipelineId | String| The pipeline id
 
 ## Bitbucket.listPipelineConfig
 Retrieve the repository pipelines configuration.
-
+`
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.updatePipelineConfig
-Update the pipelines configuration for a repository.
+Enables the pipelines configuration for a repository.
 
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
-| enabled    | Select| Whether Pipelines is enabled for the repository.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.updateBuildNumber
 Retrieve the repository pipelines configuration.
@@ -744,8 +742,8 @@ Retrieve the repository pipelines configuration.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | buildNumber| String| Next build number
 
 ## Bitbucket.getPipelineSingleSchedule
@@ -754,8 +752,8 @@ Retrieve a schedule by its UUID.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | scheduleId | String| The uuid of the schedule.
 
 ## Bitbucket.updatePipelineSchedule
@@ -764,8 +762,8 @@ Update a schedule.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | scheduleId | String| The uuid of the schedule.
 | cronPattern| String| The cron expression that the schedule applies.
 | enabled    | Select| Whether the schedule is enabled.
@@ -776,8 +774,8 @@ Delete a schedule by its UUID.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | scheduleId | String| The uuid of the schedule.
 
 ## Bitbucket.listPipelineScheduleExecutions
@@ -786,8 +784,8 @@ Retrieve the executions of a given schedule.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | scheduleId | String| The uuid of the schedule.
 
 ## Bitbucket.getRepositorySSHCredentials
@@ -796,8 +794,8 @@ Retrieve the repository SSH key pair excluding the SSH private key.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.updateRepositorySSHCredentials
 Update or create the repository SSH key pair excluding the SSH private key. 
@@ -805,8 +803,8 @@ Update or create the repository SSH key pair excluding the SSH private key.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | publicKey  | String| The SSH public key.
 | privateKey | String| The SSH pricate key.
 
@@ -816,8 +814,8 @@ Delete the repository SSH key pair
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.getRepositoryKnownHost
 Retrieve a repository level known host.
@@ -825,8 +823,8 @@ Retrieve a repository level known host.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | knownHostId| String| The UUID of the known host to retrieve.
 
 ## Bitbucket.updateRepositoryKnownHost
@@ -835,8 +833,8 @@ Update a repository level known host.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | knownHostId| String| The UUID of the known host to retrieve.
 | hostname   | String| The hostname of the known host.
 
@@ -846,8 +844,8 @@ Delete a repository level known host.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | knownHostId| String| The UUID of the known host to retrieve.
 
 ## Bitbucket.getRepositoryVariable
@@ -856,8 +854,8 @@ Retrieve a repository level variable.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | variableId | String| The UUID of the variable to retrieve.
 
 ## Bitbucket.updateRepositoryVariable
@@ -866,8 +864,8 @@ Update a repository level variable.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | variableId | String| The UUID of the variable to retrieve.
 | value      | String| The value of the variable.
 | secured    | Select| If true, this variable will be treated as secured. The value will never be exposed in the logs or the REST API.
@@ -879,8 +877,8 @@ Delete a repository level variable.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | variableId | String| The UUID of the variable to retrieve.
 
 ## Bitbucket.listPullrequests
@@ -889,8 +887,8 @@ Returns a paginated list of all pull requests on the specified repository. By de
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | state      | Select| Only return pull requests that are in this state.
 | page       | Number| Page to return
 
@@ -900,8 +898,8 @@ Creates a new pull request.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | title      | String| Title of the pull request.
 | source     | JSON  | Source object
 | destination| JSON  | Destination object
@@ -913,8 +911,8 @@ Returns a paginated list of the pull request's activity log.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | page       | Number| Page to return
 
 ## Bitbucket.getSinglePullrequest
@@ -923,8 +921,8 @@ Returns the specified pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.updatePullrequest
@@ -933,8 +931,8 @@ Mutates the specified pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 | title        | String| Title of the pull request.
 | source       | JSON  | Source object
@@ -947,8 +945,8 @@ Returns a paginated list of the pull request's activity log.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 | page         | Number| Page to return
 
@@ -958,8 +956,8 @@ Approve the specified pull request as the authenticated user.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.unapprovePullrequest
@@ -968,8 +966,8 @@ Redact the authenticated user's approval of the specified pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.listPullrequestComments
@@ -978,8 +976,8 @@ Redact the authenticated user's approval of the specified pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 | page         | Number| Page to return
 
@@ -989,8 +987,8 @@ Returns a specific pull request comment.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 | commentId    | String| Id of the comment
 
@@ -1000,8 +998,8 @@ Returns a paginated list of the pull request's commits.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 | page         | Number| Page to return
 
@@ -1011,8 +1009,8 @@ Declines the pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.getPullrequestDiff
@@ -1021,8 +1019,8 @@ Fetches pull request diff
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.mergePullrequest
@@ -1031,8 +1029,8 @@ Merges the pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.listPullrequestPatches
@@ -1041,8 +1039,8 @@ List pull request patches
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.listPullrequestStatuses
@@ -1051,8 +1049,8 @@ Returns all statuses (e.g. build results) for the given pull request.
 | Field        | Type  | Description
 |--------------|-------|----------
 | accessToken  | String| oAuth 2 access token
-| username     | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug     | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username     | String| Username of the user
+| reposlug     | String| Repository slug
 | pullrequestId| String| Id of the pull request
 
 ## Bitbucket.listRefs
@@ -1061,8 +1059,8 @@ List repository refs
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.listBranches
 List repository branches
@@ -1070,8 +1068,8 @@ List repository branches
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.getSingleBranch
 Fetches signle repository branch
@@ -1079,8 +1077,8 @@ Fetches signle repository branch
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | branchName | String| Name of the branch
 
 ## Bitbucket.listTags
@@ -1089,8 +1087,8 @@ List repository tags
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.addTag
 Add repository tag
@@ -1098,8 +1096,8 @@ Add repository tag
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | name       | String| Name of the tag
 | target     | JSON  | JSON object with target of the tag
 
@@ -1109,8 +1107,8 @@ Retrieves information about single tag
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | name       | String| Name of the tag
 
 ## Bitbucket.getSrc
@@ -1119,18 +1117,18 @@ This endpoint redirects the client to the directory listing of the root director
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | path       | String| Path to the directory or file , e.g node/path
 
 ## Bitbucket.uploadCommit
-This endpoint redirects the client to the directory listing of the root directory on the main branch.
+This endpoint is used to create new commits in the repository by uploading files.
 
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | file       | File  | File with commit
 
 ## Bitbucket.listVersions
@@ -1139,8 +1137,8 @@ Returns the versions that have been defined in the issue tracker.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.getSingleVersion
 Returns the specified issue tracker version object.
@@ -1148,8 +1146,8 @@ Returns the specified issue tracker version object.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 | versionId  | String| Id of the version
 
 ## Bitbucket.listWatchers
@@ -1158,8 +1156,8 @@ Returns a paginated list of all the watchers on the specified repository.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
-| reposlug   | String| This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.
+| username   | String| Username of the user
+| reposlug   | String| Repository slug
 
 ## Bitbucket.listSnippets
 Returns all snippets. Like pull requests, repositories and teams, the full set of snippets is defined by what the current user has access to.
@@ -1167,7 +1165,7 @@ Returns all snippets. Like pull requests, repositories and teams, the full set o
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
+| username   | String| Username of the user
 | role       | Select| Role of the current user
 
 ## Bitbucket.listTeams
@@ -1176,7 +1174,7 @@ Returns all the teams that the authenticated user is associated with.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| username   | String| This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.
+| username   | String| Username of the user
 | role       | Select| Role of the current user
 
 ## Bitbucket.getSingleProject
@@ -1185,8 +1183,8 @@ Retrieves single project
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| owner      | String| The team which owns the project. This can either be the username of the team or the UUID of the team (surrounded by curly-braces ({})).
-| projectKey | String| The project in question. This can either be the actual key assigned to the project or the UUID (surrounded by curly-braces ({})).
+| owner      | String| The team which owns the project. 
+| projectKey | String| The project in question. 
 
 ## Bitbucket.updateProject
 Retrieves single project
@@ -1194,8 +1192,8 @@ Retrieves single project
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| owner      | String| The team which owns the project. This can either be the username of the team or the UUID of the team (surrounded by curly-braces ({})).
-| projectKey | String| The project in question. This can either be the actual key assigned to the project or the UUID (surrounded by curly-braces ({})).
+| owner      | String| The team which owns the project. 
+| projectKey | String| The project in question. 
 | name       | String| Name of the project
 | key        | String| Key of the project
 | description| String| Description of the project
@@ -1207,8 +1205,8 @@ Deletes single project
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| oAuth 2 access token
-| owner      | String| The team which owns the project. This can either be the username of the team or the UUID of the team (surrounded by curly-braces ({})).
-| projectKey | String| The project in question. This can either be the actual key assigned to the project or the UUID (surrounded by curly-braces ({})).
+| owner      | String| The team which owns the project. 
+| projectKey | String| The project in question. 
 
 ## Bitbucket.getTeamInfo
 Gets the public information associated with a team.

@@ -19,7 +19,7 @@ $app->post('/api/Bitbucket/addBranchRestrictions', function ($request, $response
     ];
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
-
+$data['value'] = (int) $data['value'];
     
     $client = $this->httpClient;
     $query_str = "https://api.bitbucket.org/2.0/repositories/{$data['username']}/{$data['reposlug']}/branch-restrictions";

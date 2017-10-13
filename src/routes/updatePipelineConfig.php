@@ -19,7 +19,7 @@ $app->post('/api/Bitbucket/updatePipelineConfig', function ($request, $response)
     ];
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
-
+$data['enabled'] = true;
     
 
     $client = $this->httpClient;

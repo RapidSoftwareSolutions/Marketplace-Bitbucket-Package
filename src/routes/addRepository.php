@@ -13,7 +13,7 @@ $app->post('/api/Bitbucket/addRepository', function ($request, $response) {
     }
 
     $requiredParams = ['accessToken'=>'accessToken','username'=>'username','reposlug'=>'reposlug'];
-    $optionalParams = ['language'=>'language','scm'=>'scm','hasWiki'=>'hasWiki','isPrivate'=>'isPrivate','description'=>'description','hasIssues'=>'hasIssues'];
+    $optionalParams = ['language'=>'language','scm'=>'scm','hasWiki'=>'has_wiki','isPrivate'=>'is_private','description'=>'description','hasIssues'=>'has_issues'];
     $bodyParams = [
        'json' => ['language','scm','has_wiki','is_private','description','has_issues']
     ];
@@ -25,7 +25,6 @@ $app->post('/api/Bitbucket/addRepository', function ($request, $response) {
     $client = $this->httpClient;
     $query_str = "https://api.bitbucket.org/2.0/repositories/{$data['username']}/{$data['reposlug']}";
 
-    
 
     $requestParams = \Models\Params::createRequestBody($data, $bodyParams);
     $requestParams['headers'] = ["Authorization"=>"Bearer {$data['accessToken']}"];

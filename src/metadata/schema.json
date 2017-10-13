@@ -197,7 +197,7 @@
         },
         {
             "name": "listRepositoriesByUsername",
-            "description": "Returns a paginated list of all repositories owned by the specified account or UUID.",
+            "description": "Returns a paginated list of all repositories owned by the specified account ",
             "args": [{
                     "name": "accessToken",
                     "type": "String",
@@ -207,7 +207,7 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
@@ -265,13 +265,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -308,7 +308,7 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
@@ -419,14 +419,14 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
                     "info": "Slug for new repository",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "language",
@@ -530,13 +530,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -573,13 +573,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -616,13 +616,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -713,13 +713,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -762,13 +762,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -850,13 +850,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -899,13 +899,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -948,13 +948,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -997,13 +997,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1046,13 +1046,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1144,13 +1144,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1199,13 +1199,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1296,13 +1296,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1345,13 +1345,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1394,13 +1394,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1449,13 +1449,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1523,13 +1523,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -1566,13 +1566,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1615,13 +1615,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -1658,13 +1658,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1707,13 +1707,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1756,13 +1756,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1805,13 +1805,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1869,13 +1869,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -1912,13 +1912,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -1963,13 +1963,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2012,13 +2012,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2061,13 +2061,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -2104,13 +2104,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -2147,13 +2147,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2253,13 +2253,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2302,13 +2302,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2414,13 +2414,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2463,13 +2463,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -2506,13 +2506,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2538,10 +2538,10 @@
                     "name": "kind",
                     "type": "Select",
                     "options": [
-                        "bugtrivial",
+                        "bug",
                         "enhancement",
                         "proposal",
-                        "proposal"
+                        "task"
                     ],
                     "info": "Kind of the issue",
                     "required": false
@@ -2580,7 +2580,7 @@
                     "options": [
                         "new",
                         "open",
-                        "resolve",
+                        "resolved",
                         "on hold",
                         "invalid",
                         "duplicate",
@@ -2641,13 +2641,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2690,13 +2690,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2739,13 +2739,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2788,13 +2788,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2845,13 +2845,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2900,13 +2900,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -2955,13 +2955,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3004,13 +3004,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3059,13 +3059,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3108,13 +3108,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3157,13 +3157,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3206,13 +3206,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3255,13 +3255,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3304,13 +3304,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3353,13 +3353,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -3396,13 +3396,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3445,13 +3445,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3494,13 +3494,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3543,13 +3543,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3598,13 +3598,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3653,13 +3653,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3702,13 +3702,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -3735,7 +3735,7 @@
         },
         {
             "name": "updatePipelineConfig",
-            "description": "Update the pipelines configuration for a repository.",
+            "description": "Enables the pipelines configuration for a repository.",
             "args": [{
                     "name": "accessToken",
                     "type": "String",
@@ -3745,24 +3745,14 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
-                },
-                {
-                    "name": "enabled",
-                    "type": "Select",
-                    "options": [
-                        "true",
-                        "false"
-                    ],
-                    "info": "Whether Pipelines is enabled for the repository.",
-                    "required": false
                 }
             ],
             "vendorRequest": {
@@ -3770,9 +3760,7 @@
                 "method": "put",
                 "requestParameters": [{
                     "type": "json",
-                    "parameters": [
-                        "enabled"
-                    ]
+                    "parameters": []
                 }],
                 "headers": {
                     "Authorization": "Bearer {$data['accessToken']}"
@@ -3800,13 +3788,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3854,13 +3842,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3903,13 +3891,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -3974,13 +3962,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4023,13 +4011,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4072,13 +4060,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -4115,13 +4103,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4179,13 +4167,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -4222,13 +4210,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4271,13 +4259,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4328,13 +4316,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4377,13 +4365,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4426,13 +4414,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4501,13 +4489,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4550,13 +4538,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4614,13 +4602,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4686,13 +4674,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4737,13 +4725,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4786,13 +4774,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4864,13 +4852,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4921,13 +4909,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -4970,13 +4958,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5019,13 +5007,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5076,13 +5064,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5131,13 +5119,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5188,13 +5176,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5237,13 +5225,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5286,13 +5274,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5335,13 +5323,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5384,13 +5372,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5433,13 +5421,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -5476,13 +5464,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -5519,13 +5507,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5568,13 +5556,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -5611,13 +5599,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5669,13 +5657,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5718,13 +5706,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5757,7 +5745,7 @@
         },
         {
             "name": "uploadCommit",
-            "description": "This endpoint redirects the client to the directory listing of the root directory on the main branch.",
+            "description": "This endpoint is used to create new commits in the repository by uploading files.",
             "args": [{
                     "name": "accessToken",
                     "type": "String",
@@ -5767,13 +5755,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5854,13 +5842,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -5897,13 +5885,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 },
                 {
@@ -5946,13 +5934,13 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
                     "name": "reposlug",
                     "type": "String",
-                    "info": "This can either be the repository slug or the UUID of the repository, surrounded by curly-braces, for example: {repository UUID}.",
+                    "info": "Repository slug",
                     "required": true
                 }
             ],
@@ -5989,7 +5977,7 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
@@ -6039,7 +6027,7 @@
                 {
                     "name": "username",
                     "type": "String",
-                    "info": "This can either be the username or the UUID of the user, surrounded by curly-braces, for example: {user UUID}.",
+                    "info": "Username of the user",
                     "required": true
                 },
                 {
@@ -6089,13 +6077,13 @@
                 {
                     "name": "owner",
                     "type": "String",
-                    "info": "The team which owns the project. This can either be the username of the team or the UUID of the team (surrounded by curly-braces ({})).",
+                    "info": "The team which owns the project. ",
                     "required": true
                 },
                 {
                     "name": "projectKey",
                     "type": "String",
-                    "info": "The project in question. This can either be the actual key assigned to the project or the UUID (surrounded by curly-braces ({})).",
+                    "info": "The project in question. ",
                     "required": true
                 }
             ],
@@ -6132,13 +6120,13 @@
                 {
                     "name": "owner",
                     "type": "String",
-                    "info": "The team which owns the project. This can either be the username of the team or the UUID of the team (surrounded by curly-braces ({})).",
+                    "info": "The team which owns the project. ",
                     "required": true
                 },
                 {
                     "name": "projectKey",
                     "type": "String",
-                    "info": "The project in question. This can either be the actual key assigned to the project or the UUID (surrounded by curly-braces ({})).",
+                    "info": "The project in question. ",
                     "required": true
                 },
                 {
@@ -6211,13 +6199,13 @@
                 {
                     "name": "owner",
                     "type": "String",
-                    "info": "The team which owns the project. This can either be the username of the team or the UUID of the team (surrounded by curly-braces ({})).",
+                    "info": "The team which owns the project. ",
                     "required": true
                 },
                 {
                     "name": "projectKey",
                     "type": "String",
-                    "info": "The project in question. This can either be the actual key assigned to the project or the UUID (surrounded by curly-braces ({})).",
+                    "info": "The project in question. ",
                     "required": true
                 }
             ],

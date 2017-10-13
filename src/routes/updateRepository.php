@@ -13,7 +13,7 @@ $app->post('/api/Bitbucket/updateRepository', function ($request, $response) {
     }
 
     $requiredParams = ['accessToken'=>'accessToken','username'=>'username'];
-    $optionalParams = ['reposlug'=>'reposlug','language'=>'language','scm'=>'scm','hasWiki'=>'hasWiki','isPrivate'=>'isPrivate','description'=>'description','hasIssues'=>'hasIssues'];
+    $optionalParams = ['reposlug'=>'reposlug','language'=>'language','scm'=>'scm','hasWiki'=>'has_wiki','isPrivate'=>'is_private','description'=>'description','hasIssues'=>'has_issues'];
     $bodyParams = [
        'json' => ['language','scm','has_wiki','is_private','description','has_issues']
     ];
