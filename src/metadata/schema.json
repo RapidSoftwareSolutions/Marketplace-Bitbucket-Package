@@ -44,7 +44,7 @@
         }]
     }],
     "steps": [
-        "Browse to Bitbucket http://https://www.bitbucket.com/",
+        "Browse to Bitbucket https://www.bitbucket.com/",
         "Browse to Setting https://bitbucket.org/account",
         "Create new oAuth consumer",
         "Direct user to https://bitbucket.org/site/oauth2/authorize?client_id=API_KEY&response_type=code",
