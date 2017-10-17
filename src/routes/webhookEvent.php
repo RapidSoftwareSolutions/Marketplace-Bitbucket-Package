@@ -9,7 +9,7 @@ $app->post('/api/Bitbucket/webhookEvent', function ($request, $response, $args) 
         }
         $reply = [
             "http_resp" => '',
-            "client_msg" => $post_data['args']['body'],
+            "client_msg" => $post_data,
             "params" => $post_data['args']['params']
         ];
 
