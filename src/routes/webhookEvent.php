@@ -7,13 +7,12 @@ $app->post('/api/Bitbucket/webhookEvent', function ($request, $response, $args) 
         // } else {
         //     $post_data = $validateRes;
         // }
-        $data  = $request->getBody()->getContents();
-        var_dump($data);
-        exit();
+        $data  = json_encode($request->getBody()->getContents());
+        
         $reply = [
             "http_resp" => '',
-            "client_msg" => $post_data['args']['body'],
-            "params" => $post_data['args']['params']
+            "client_msg" =>$data,
+            "params" => ''
         ];
 
         $result['callback'] = 'success';
