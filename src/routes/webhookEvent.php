@@ -7,7 +7,7 @@ $app->post('/api/Bitbucket/webhookEvent', function ($request, $response, $args) 
         // } else {
         //     $post_data = $validateRes;
         // }
-        $data  = json_encode($request->getBody()->getContents());
+        $data  = $request->getBody()->getContents();
         
         $reply = [
             "http_resp" => '',
