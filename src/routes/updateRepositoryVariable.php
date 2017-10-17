@@ -23,7 +23,7 @@ $app->post('/api/Bitbucket/updateRepositoryVariable', function ($request, $respo
     
 
     $client = $this->httpClient;
-    $query_str = "https://api.bitbucket.org/2.0/repositories/{$data['username']}/{$data['reposlug']}/pipelines_config/variables/{$data['variableId']}";
+    $query_str = "https://api.bitbucket.org/2.0/repositories/{$data['username']}/{$data['reposlug']}/pipelines_config/variables/{{$data['variableId']}}";
 
     
 

@@ -4382,7 +4382,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -4453,7 +4453,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "put",
                 "requestParameters": [{
                     "type": "json",
@@ -4506,7 +4506,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/repositories\/{$data['username']}\/{$data['reposlug']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "delete",
                 "requestParameters": [{
                     "type": "query",
@@ -6730,7 +6730,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/teams\/{$data['owner']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/teams\/{$data['owner']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -6795,7 +6795,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/teams\/{$data['owner']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/teams\/{$data['owner']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "put",
                 "requestParameters": [{
                     "type": "json",
@@ -6842,7 +6842,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/teams\/{$data['owner']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/teams\/{$data['owner']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "delete",
                 "requestParameters": [{
                     "type": "query",
@@ -7459,7 +7459,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "get",
                 "requestParameters": [{
                     "type": "query",
@@ -7524,7 +7524,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "put",
                 "requestParameters": [{
                     "type": "json",
@@ -7571,7 +7571,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/pipelines_config\/variables\/{$data['variableId']}",
+                "url": "https:\/\/api.bitbucket.org\/2.0\/users\/{$data['username']}\/pipelines_config\/variables\/{{$data['variableId']}}",
                 "method": "delete",
                 "requestParameters": [{
                     "type": "query",

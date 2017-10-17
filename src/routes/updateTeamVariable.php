@@ -23,7 +23,7 @@ $app->post('/api/Bitbucket/updateTeamVariable', function ($request, $response) {
     
 
     $client = $this->httpClient;
-    $query_str = "https://api.bitbucket.org/2.0/teams/{$data['owner']}/pipelines_config/variables/{$data['variableId']}";
+    $query_str = "https://api.bitbucket.org/2.0/teams/{$data['owner']}/pipelines_config/variables/{{$data['variableId']}}";
 
     
 

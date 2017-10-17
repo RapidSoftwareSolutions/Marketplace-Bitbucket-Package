@@ -23,9 +23,7 @@ $app->post('/api/Bitbucket/getUserSingleVariable', function ($request, $response
     
 
     $client = $this->httpClient;
-    $query_str = "https://api.bitbucket.org/2.0/users/{$data['username']}/pipelines_config/variables/{$data['variableId']}";
-
-    
+    $query_str = "https://api.bitbucket.org/2.0/users/{$data['username']}/pipelines_config/variables/{{$data['variableId']}}";
 
     $requestParams = \Models\Params::createRequestBody($data, $bodyParams);
     $requestParams['headers'] = ["Authorization"=>"Bearer {$data['accessToken']}"];
